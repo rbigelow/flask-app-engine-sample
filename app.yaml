@@ -1,0 +1,9 @@
+service: default
+runtime: python311
+
+##YOU CAN ADD ENVIRONMENT VARIABLES HERE
+# env_variables:
+#   my_var: "Hello World!"
+
+# ALLOW APP ENGINE TO USE app.py index.py main.py
+entrypoint : gunicorn -b :$PORT app:app
